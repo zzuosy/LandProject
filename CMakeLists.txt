@@ -146,28 +146,28 @@ set(3RD_LIBS
 
 
 add_executable(decopose_yolo_node src/decopose_yolo.cpp)
-
 add_dependencies(decopose_yolo_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
 target_link_libraries(decopose_yolo_node
   ${catkin_LIBRARIES} ${3RD_LIBS}
 )
 
 
 add_executable(filternav_node src/filternav.cpp)
-
 add_dependencies(filternav_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(filternav_node
   ${catkin_LIBRARIES}
 )
 
 add_executable(dist_filternav_node src/dist_filternav.cpp)
-
 add_dependencies(dist_filternav_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(dist_filternav_node
   ${catkin_LIBRARIES}
 )
 
+add_executable(compyanga_node src/compyanga.cpp) 
+target_link_libraries(compyanga_node 
+${catkin_LIBRARIES}
+)
 
 
 
